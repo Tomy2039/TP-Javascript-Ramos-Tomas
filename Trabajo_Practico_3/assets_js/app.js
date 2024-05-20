@@ -50,4 +50,35 @@ function ListarTareas() {
         alert(lista);
     }
 }
+
+function editarTarea() {
+    ListarTareas();
+    let numero = parseInt(prompt('Ingrese el numero de la tarea que desea editar: '));
+    let indice = numero - 1;
+    if (indice >= 0 && indice< tareas.length) {
+        let nuevaTarea = prompt('Ingrese el nuevo nombre de la tarea:');
+        if (nuevaTarea && nuevaTarea.trim()) {
+            tareas[indice]= nuevaTarea;
+            alert('Tarea actualizada');
+        }else {
+            alert('Ingrese un nombre de tarea valido');
+        }
+    } else {
+        alert('Nummero de tarea invalido');
+    }
+}
+function eliminarTarea() {
+    ListarTareas();
+    let numero = parseInt(prompt('Ingrese el numero de la tarea que desea eliminar: '));
+    let indice = numero - 1;
+    if (indice >= 0 && indice< tareas.length) {
+        let confirmar = confirm(`¿Esta seguro de que desea eliminar la tarea '${tareas[indice]}'?`);
+        if (confirmar) {
+            let tareaEliminada = tareas.splice(indice, 1);
+            alert(`Tarea '${tareaEliminada}' eliminada.`);
+        }
+    } else {
+        alert('Numero de tarea invalido');
+    }
+}
 mostrarMenu();
