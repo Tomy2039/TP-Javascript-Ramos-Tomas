@@ -9,7 +9,7 @@ let listaMenu = [
 let tareas = []
 function mostrarMenu() {
     let listaVertical = parseInt(prompt(listaMenu.join("\n")));
-    while (listaVertical!== 5 || 0){
+    while (listaVertical!== 5){
         switch (listaVertical){
             case 1:
                 agregarTarea();
