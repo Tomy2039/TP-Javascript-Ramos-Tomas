@@ -9,7 +9,7 @@ let listaMenu = [
 let tareas = []
 function mostrarMenu() {
     let listaVertical = parseInt(prompt(listaMenu.join("\n")));
-    while (listaVertical!==5 || 0){
+    while (listaVertical!== 5 || 0){
         switch (listaVertical){
             case 1:
                 agregarTarea();
@@ -23,9 +23,9 @@ function mostrarMenu() {
             case 4:
                 eliminarTarea();
                 break;
-                default:
-                    alert("Opcion no valida");
-                    break;
+            default:
+                alert("Opcion no valida");
+                break;
         }
         listaVertical = parseInt(prompt(listaMenu.join("\n")));
     }
@@ -64,7 +64,7 @@ function editarTarea() {
             alert('Ingrese un nombre de tarea valido');
         }
     } else {
-        alert('Nummero de tarea invalido');
+        alert('Numero de tarea invalido');
     }
 }
 function eliminarTarea() {
